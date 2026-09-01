@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Development notes from Sora Nakamura, a synthetic SECCAP training persona.">
+  <title>Sora Dev Notes</title>
+  <style>
+    :root { color-scheme: light; --paper:#f3f1eb; --ink:#172128; --muted:#68747b; --line:#ccd2d2; --accent:#b9293d; --panel:#faf9f5; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.7 Georgia,"Times New Roman",serif; }
+    .shell { width:min(920px,calc(100% - 32px)); margin:0 auto; }
+    header { padding:46px 0 28px; border-bottom:2px solid var(--ink); }
+    .kicker { margin:0 0 8px; color:var(--accent); font:700 12px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace; letter-spacing:.15em; text-transform:uppercase; }
+    h1 { margin:0; font-size:clamp(38px,7vw,68px); line-height:.95; letter-spacing:-.045em; }
+    .intro { display:grid; grid-template-columns:1fr auto; gap:24px; align-items:end; margin-top:22px; }
+    .intro p { max-width:620px; margin:0; color:#455158; font-size:18px; }
+    nav { display:flex; gap:14px; flex-wrap:wrap; font:13px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace; }
+    a { color:var(--accent); text-underline-offset:3px; }
+    main { padding:12px 0 52px; }
+    article { display:grid; grid-template-columns:150px 1fr; gap:28px; padding:34px 0; border-bottom:1px solid var(--line); }
+    time { color:var(--muted); font:12px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace; }
+    h2 { margin:0 0 10px; font-size:27px; line-height:1.15; }
+    article p { margin:0 0 14px; }
+    figure { margin:20px 0 4px; padding:10px; border:1px solid var(--line); background:var(--panel); }
+    figure img { display:block; width:100%; height:auto; }
+    figcaption { display:flex; justify-content:space-between; gap:18px; padding:9px 2px 0; color:var(--muted); font:11px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace; }
+    code { padding:.12em .32em; background:#e3e3dc; font:14px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace; }
+    footer { display:flex; justify-content:space-between; gap:20px; padding:22px 0 40px; color:var(--muted); font:11px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace; }
+    @media(max-width:680px){ .intro,article{grid-template-columns:1fr}.intro{align-items:start}article{gap:9px}figcaption,footer{flex-direction:column} }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <p class="kicker">Development notebook</p>
+      <h1>Sora Dev Notes</h1>
+      <div class="intro">
+        <p>I’m Sora Nakamura, a client software developer working on release reliability and update testing for Sakura SecureConnect.</p>
+        <nav aria-label="External links">
+          <a href="https://github.com/sora-dev77">GitHub</a>
+          <a href="https://github.com/sora-dev77/sakura-secureconnect-client">Client repository</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <time datetime="2026-09-01">01 SEP 2026<br>18:20 JST</time>
+        <div>
+          <h2>APAC fallback bench test</h2>
+          <p>The regional fallback responded consistently during tonight’s client test. I kept the original bench photo here because the processed copy in chat loses useful file metadata.</p>
+          <p>Next check: confirm the stable-channel manifest and signing behavior before the morning rollout.</p>
+          <figure>
+            <img src="assets/apac-fallback-bench.jpg" alt="Laptop and network switch on a controlled VPN update test bench" width="1536" height="1024">
+            <figcaption>
+              <span>Original camera file · JPEG</span>
+              <a href="assets/apac-fallback-bench.jpg" download>Download original</a>
+            </figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article>
+        <time datetime="2026-08-12">12 AUG 2026<br>16:12 JST</time>
+        <div>
+          <h2>SecureConnect 4.2.0 release prep</h2>
+          <p>The release metadata is now in the public client repository. The stable channel still requires the <code>SR-REL-2019</code> signing key.</p>
+          <p><a href="https://github.com/sora-dev77/sakura-secureconnect-client/commit/d10897a94b735d367f2fb998d7aace11d457fd0e">View the release commit</a></p>
+        </div>
+      </article>
+
+      <article>
+        <time datetime="2026-07-19">19 JUL 2026<br>10:48 JST</time>
+        <div>
+          <h2>Signature checks</h2>
+          <p>Added a small verifier and regression tests. An unsigned release must not pass through the normal stable-channel path.</p>
+          <p><a href="https://github.com/sora-dev77/sakura-secureconnect-client/commit/584ba0b3cd519ad86f901bc5eb9ac92a851c03dc">Read the implementation</a></p>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <span>Contact: sora.nakamura@sakura-robotics.example</span>
+      <span>Controlled SECCAP training persona · No real individual or organization represented</span>
+    </footer>
+  </div>
+</body>
+</html>
